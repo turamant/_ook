@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+
+{% load static %}
+
+{% block title %}ListNotes{% endblock title %}
+
+{% block content %}
+
+<h1>ListNotes</h1>
+<ul>
+{% for note in object_list %}
+    <!--<li><a href="{{ note.get_absolute_url }}">{{ note.fullname }}</a></li>-->
+    <li><a href="{% url 'detail' note.pk %}">{{ note.fullname }}</a></li>
+{% endfor %}
+</ul>
+{% endblock content %}

@@ -1,0 +1,24 @@
+{% extends '_base.html' %}
+
+{% load static %}
+
+{% block title %}DetailNote{% endblock title %}
+
+{% block content %}
+
+<h1>DetailNote</h1>
+<ul>
+   <li>{{ note.fullname }}</li>
+   <li>{{ note.slug }}</li>
+   <li>{{ note.nickname }}</li>
+   <li>{{ note.email }}</li>
+   <li>{{ note.address }}</li>
+   <li>{{ note.phone }}</li>
+   <li><img src="{{ note.image.url }}" width="100" height="100"/></li>
+   <li>{{ note.user }}</li>
+
+</ul>
+
+
+
+{% endblock content %}
