@@ -24,7 +24,7 @@ class Note(models.Model):
         return self.fullname
 
     def __get_absolute_url(self):
-        return reverse('detail', kwargs={"slug":self.slug})
+        return reverse('note_detail', kwargs={'slug':self.slug})
 
     class Meta:
         ordering = ["fullname"]

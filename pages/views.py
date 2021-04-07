@@ -11,9 +11,9 @@ class AboutView(TemplateView):
 
 class NoteListView(ListView):
     model = Note
-    template_name='pages/list.html'
+    template_name='pages/note_list.html'
 
 class NoteDetailView(DetailView):
     model = Note
-    template_name = 'pages/detail.html'
-    #slug_field = 'slug'
+    template_name = 'pages/note_detail.html'
+    slug_field = 'url'
